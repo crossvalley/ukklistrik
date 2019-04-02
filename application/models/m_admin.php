@@ -293,7 +293,7 @@ class M_admin extends CI_Model {
 
         $this->db->where('id_tagihan', $this->input->post('id_tagihan'))
                  ->update('tagihan', $datatag);
-        
+
         if($this->db->affected_rows() > 0){
           return TRUE;
           } else {
@@ -397,8 +397,15 @@ class M_admin extends CI_Model {
            'meter_awal'=>$this->input->post('meter_awal'),
            'meter_akhir'=>$this->input->post('meter_akhir')
        );
-       return $this->db->where('id_penggunaan', $this->input->post('id_penggunaan'))
+       $this->db->where('id_penggunaan', $this->input->post('id_penggunaan'))
                    ->update('penggunaan', $datasimpan);
+
+      $meter = (($this->input->post('meter_akhir'))-($this->input->post('meter_awal')));
+      $updatemeter=array(
+            'jumlah_meter'=> $meter
+      );
+      $this->db->where('id_penggunaan', $this->input->post('id_penggunaan'))
+               ->update('tagihan', $updatemeter);
    }
 
    public function getDataTagihan($id)

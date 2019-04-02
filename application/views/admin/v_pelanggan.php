@@ -164,7 +164,7 @@ input[type="radio"]:disabled + .label-text:before{
                 <?=$data->alamat?>
 							</td>
 							<td>
-                <?=$data->daya?> 
+                <?=$data->daya?>
 							</td>
 							<td>
                 <?=$data->nama_tarif?>
@@ -217,7 +217,7 @@ input[type="radio"]:disabled + .label-text:before{
 								<div class="form-group">
 									<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Nomor Kwh : </label>
 									<div class="col-md-6 col-sm-6 col-xs-12">
-										<input type="text" name="nomor_kwh" required="required" class="form-control col-md-7 col-xs-12">
+										<input type="number" name="nomor_kwh" required="required" class="form-control col-md-7 col-xs-12">
 									</div>
 								</div>
 

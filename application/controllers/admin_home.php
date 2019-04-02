@@ -7,10 +7,12 @@ class admin_home extends CI_Controller {
         parent::__construct();
         $this->load->model('m_admin','admin');
         if ($this->session->userdata('login')!=TRUE) {
-								redirect('admin/login','refresh');
-				}	
+						redirect('admin/login','refresh');
+				}elseif ($this->session->userdata('id_level')==FALSE) {
+				    redirect('home','refresh');
+				}
 		}
-		
+
 		public function index()
     {
         $data['DataAdmin'] = $this->admin->getDataAdmin();
@@ -184,12 +186,12 @@ class admin_home extends CI_Controller {
         $this->load->view('v_template', $data);
 		}
 
-		
+
 		public function data_pembayaran($id){
 			$data=$this->admin->data_pembayaran($id);
 			echo json_encode($data);
 	}
-		
+
 		public function konfirmasi_pembayaran(){
 				$data=$this->admin->konfirmasi_pembayaran();
 				$this->session->set_flashdata('pesan_sukses', 'Sukses Mengonfirmasi Pembayaran');

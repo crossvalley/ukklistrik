@@ -42,7 +42,7 @@
       </div>
 
       <div class="form-group has-feedback">
-        <input type="text" name="nomor_kwh" class="form-control" placeholder="Nomor Kwh">
+        <input type="number" name="nomor_kwh" class="form-control" placeholder="Nomor Kwh">
         <span class="glyphicon glyphicon-certificate form-control-feedback"></span>
       </div>
 
@@ -65,10 +65,10 @@
           </select>
 
       </div>
-    
-     
+
+
       <div class="row">
-       
+
         <!-- /.col -->
         <div class="col-xs-12">
           <input name="submit" id="submit" type="submit" class="btn btn-primary btn-block btn-flat" value="Daftar">

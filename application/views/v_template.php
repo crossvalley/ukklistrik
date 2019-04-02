@@ -10,8 +10,7 @@
   <link rel="stylesheet" href="<?=base_url()?>assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<?=base_url()?>assets/bower_components/font-awesome/css/font-awesome.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="<?=base_url()?>assets/bower_components/Ionicons/css/ionicons.min.css">
+
   <!-- Theme style -->
   <link rel="stylesheet" href="<?=base_url()?>assets/dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -468,19 +467,6 @@
 <script src="<?=base_url()?>assets/bower_components/datatables.net-bs/js/dataTables.vfs_fonts.js"></script>
 <script src="<?=base_url()?>assets/bower_components/datatables.net-bs/js/dataTables.buttons.html5.min.js"></script>
 
-<!-- jQuery Knob Chart -->
-<script src="<?=base_url()?>assets/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-
-<!-- datepicker -->
-<script src="<?=base_url()?>assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<!-- Bootstrap WYSIHTML5 -->
-<script src="<?=base_url()?>assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
-<!-- Slimscroll -->
-<script src="<?=base_url()?>assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="<?=base_url()?>assets/bower_components/fastclick/lib/fastclick.js"></script>
-<!-- AdminLTE App -->
 <script src="<?=base_url()?>assets/dist/js/adminlte.min.js"></script>
 <script>
 

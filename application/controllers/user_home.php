@@ -8,8 +8,10 @@ class User_home extends CI_Controller {
         $this->load->model('m_user','user');
         if ($this->session->userdata('login')!=TRUE) {
                 redirect('home','refresh');
-        }
-    
+        }elseif ($this->session->userdata('id_level')!=NULL) {
+				    redirect('admin_home','refresh');
+				}
+
     }
 
     public function tagihan()
@@ -20,17 +22,17 @@ class User_home extends CI_Controller {
         $this->load->view('v_template', $data);
     }
 
-    
+
 	public function upload_bukti()
 	{
 	     	$config['upload_path'] = './assets/bukti/';
 			$config['allowed_types'] = 'gif|jpg|png';
-			$config['max_size']  = '10000';
-			$config['max_width']  = '5000';
-			$config['max_height']  = '5800';
-			
+			$config['max_size']  = '20000';
+			$config['max_width']  = '10000';
+			$config['max_height']  = '10000';
+
 			$this->load->library('upload', $config);
-			
+
 			if ( ! $this->upload->do_upload('bukti')){
 				$this->session->set_flashdata('pesan', $this->upload->display_errors());
 				redirect('user_home/tagihan','refresh');
@@ -43,7 +45,7 @@ class User_home extends CI_Controller {
 					$this->session->set_flashdata('pesan', 'Gagal Mengupload Bukti');
 				}
 				redirect('user_home/tagihan','refresh');
-			}	
+			}
 	}
 
 

@@ -1,1 +1,0 @@
-ini tabel riwayat
