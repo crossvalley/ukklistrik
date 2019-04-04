@@ -6,7 +6,7 @@ class User extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('m_user','user');
+        $this->load->model('user_model','user');
         if ($this->session->userdata('login')==TRUE) {
                 redirect('home','refresh');
         }

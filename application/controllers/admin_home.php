@@ -6,7 +6,7 @@ class admin_home extends CI_Controller {
 	 public function __construct()
 	 {
         parent::__construct();
-        $this->load->model('m_admin','admin');
+        $this->load->model('admin_model','admin');
         if ($this->session->userdata('login')!=TRUE) {
 			redirect('admin/login','refresh');
 		}elseif ($this->session->userdata('id_level')==FALSE) {

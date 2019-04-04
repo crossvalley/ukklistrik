@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Pembayaran Listrik | Log in</title>
+  <title>PPOB Listrik | Log in</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -149,7 +149,7 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Login Untuk Melanjutkan</p>
+    <p class="login-box-msg">Masukkan Username dan Password Anda</p>
       <center><font color="red" size="3"><b><?= $this->session->flashdata('pesan_gagal'); ?></font><font color="green" size="3"><?= $this->session->flashdata('pesan_sukses'); ?></font></b></center><br />
     <form action="<?=base_url('user/proses_login')?>" method="post">
       <div class="form-group has-feedback">

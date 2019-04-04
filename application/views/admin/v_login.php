@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Pembayaran Listrik (Admin) | Log in</title>
+  <title>PPBO (Admin) | Log in</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -144,7 +144,7 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Login Untuk Melanjutkan</p>
+    <p class="login-box-msg">Masukkan Username dan Password Anda</p>
 
     <form action="<?=base_url('admin/proses_login')?>" method="post">
       <div class="form-group has-feedback">
