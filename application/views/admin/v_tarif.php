@@ -30,8 +30,6 @@
 							<th>Kode Tarif</th>
 							<th>Daya</th>
 							<th>Tarif Per Kwh</th>
-							<th>Beban</th>
-							<th>Denda</th>
 							<th>Action</th>
 						</tr>
 					</thead>
@@ -49,12 +47,6 @@
 								<?=$data->daya ?></td>
 							<td>
 								<?= $data->terperkwh ?>
-							</td>
-							<td>
-								<?=$data->beban ?>
-							</td>
-							<td>
-								<?=$data->denda ?>
 							</td>
 							<td>
 								<a class="btn btn-primary" data-toggle="modal" data-target="#edit" href="#" onclick="edit('<?=$data->id_tarif?>')">Edit</a>
