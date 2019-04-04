@@ -3,7 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_admin extends CI_Model {
 
-    public function get_login(){
+    public function get_login()
+    {
         $password = md5($this->input->post('password'));
         $this->db->select('*');
         $this->db->from('admin');
@@ -12,14 +13,16 @@ class M_admin extends CI_Model {
         return $this->db->get();
     }
 
-    public function getDataAdmin(){
+    public function getDataAdmin()
+    {
         $this->db->select('*');
         $this->db->from('admin');
         $this->db->join('level','level.id_level=admin.id_level');
         return $this->db->get()->result();
     }
 
-    public function tambah_admin(){
+    public function tambah_admin()
+    {
         $password=$this->input->post('password');
         $datasimpan=array(
             'nama_admin'=>$this->input->post('nama_admin'),
@@ -36,7 +39,7 @@ class M_admin extends CI_Model {
     }
 
     public function detail_admin($a)
-	{
+    {
         return $this->db
                     ->where('id_admin', $a)
                     ->get('admin')
@@ -55,26 +58,29 @@ class M_admin extends CI_Model {
                     ->update('admin', $data);
     }
 
-    public function hapus_admin(){
+    public function hapus_admin()
+    {
         $this->db->where('id_admin', $this->input->post('id_admin'));
         $this->db->delete('admin');
     }
 
-    public function getDataLevel(){
+    public function getDataLevel()
+    {
         $this->db->select('*');
         $this->db->from('level');
         return $this->db->get()->result();
     }
 
     public function detail_level($a)
-	{
+    {
         return $this->db
                     ->where('id_level', $a)
                     ->get('level')
                     ->row();
     }
 
-    public function tambah_level(){
+    public function tambah_level()
+    {
         $datasimpan=array(
             'nama_level'=>$this->input->post('nama_level'),
         );
@@ -96,18 +102,21 @@ class M_admin extends CI_Model {
                     ->update('level', $data);
     }
 
-    public function hapus_level(){
+    public function hapus_level()
+    {
         $this->db->where('id_level', $this->input->post('id_level'));
         $this->db->delete('level');
     }
 
-    public function getDataTarif(){
+    public function getDataTarif()
+    {
         $this->db->select('*');
         $this->db->from('tarif');
         return $this->db->get()->result();
     }
 
-    public function tambah_tarif(){
+    public function tambah_tarif()
+    {
         $nama_tarif=$this->input->post('nama_tarif');
         $daya=$this->input->post('daya');
         $terperkwh=$this->input->post('terperkwh');
@@ -130,19 +139,21 @@ class M_admin extends CI_Model {
     }
 
     public function data_tarif($a)
-	{
+    {
         return $this->db
                     ->where('id_tarif', $a)
                     ->get('tarif')
                     ->row();
     }
 
-    public function hapus_tarif(){
+    public function hapus_tarif()
+    {
         $this->db->where('id_tarif', $this->input->post('id_tarif'));
         $this->db->delete('tarif');
     }
 
-    public function aktif_tarif(){
+    public function aktif_tarif()
+    {
 
         $data = array(
             'status' => "Aktif"
@@ -152,7 +163,8 @@ class M_admin extends CI_Model {
                  ->update('tarif', $data);
     }
 
-    public function nonaktif_tarif(){
+    public function nonaktif_tarif()
+    {
         $data = array(
             'status' => "Non Aktif"
         );
@@ -192,7 +204,8 @@ class M_admin extends CI_Model {
                     ->row();
     }
 
-    public function tambah_pelanggan(){
+    public function tambah_pelanggan()
+    {
         $nama_pelanggan= $this->input->post('nama_pelanggan');
         $nomor_kwh =$this->input->post('nomor_kwh');
         $alamat= $this->input->post('alamat');
@@ -234,12 +247,14 @@ class M_admin extends CI_Model {
                     ->update('pelanggan', $datasimpan);
     }
 
-    public function hapus_pelanggan(){
+    public function hapus_pelanggan()
+    {
         $this->db->where('id_pelanggan', $this->input->post('id_pelanggan'));
         $this->db->delete('pelanggan');
     }
 
-    public function aktif_pelanggan(){
+    public function aktif_pelanggan()
+    {
 
         $data = array(
             'status' => "Aktif"
@@ -249,7 +264,8 @@ class M_admin extends CI_Model {
                  ->update('pelanggan', $data);
     }
 
-    public function nonaktif_pelanggan(){
+    public function nonaktif_pelanggan()
+    {
         $data = array(
             'status' => "Non Aktif"
         );
@@ -277,7 +293,8 @@ class M_admin extends CI_Model {
                   ->row();
     }
 
-    public function konfirmasi_pembayaran(){
+    public function konfirmasi_pembayaran()
+    {
 
         $data = array(
             'status' => "Lunas",
@@ -301,7 +318,8 @@ class M_admin extends CI_Model {
         }
     }
 
-    public function tolak_pembayaran(){
+    public function tolak_pembayaran()
+    {
 
         $data = array(
             'status' => "Pembayaran Ditolak",

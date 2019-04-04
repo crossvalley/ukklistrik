@@ -3,14 +3,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_user extends CI_Model {
 
-    public function getDataTarif(){
+    public function getDataTarif()
+    {
         $this->db->select('*');
         $this->db->from('tarif');
         $this->db->where('status !=', 'Non Aktif');
         return $this->db->get()->result();
     }
 
-    public function masuk(){
+    public function masuk()
+    {
         $nama_pelanggan=$this->input->post('nama_pelanggan');
         $alamat=$this->input->post('alamat');
         $nomor_kwh=$this->input->post('nomor_kwh');
@@ -33,7 +35,8 @@ class M_user extends CI_Model {
         }
     }
 
-    public function get_login(){
+    public function get_login()
+    {
         $password = $this->input->post('password');
         $this->db->select('*');
         $this->db->from('pelanggan');
@@ -42,7 +45,8 @@ class M_user extends CI_Model {
         return $this->db->get();
     }
 
-    public function get_tarif(){
+    public function get_tarif()
+    {
         $this->db->select('*');
         $this->db->from('tarif');
         return $this->db->get();

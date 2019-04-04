@@ -3,7 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
         $this->load->model('m_admin','admin');
         if ($this->session->userdata('login')==TRUE) {
@@ -17,11 +18,12 @@ class Admin extends CI_Controller {
     }
 
     public function login()
-	  {
-		    $this->load->view('admin/v_login');
+	{
+	    $this->load->view('admin/v_login');
     }
 
-    public function proses_login(){
+    public function proses_login()
+    {
         if($this->input->post('submit')){
             $this->form_validation->set_rules('username','username', 'trim|required');
             $this->form_validation->set_rules('password','password', 'trim|required');

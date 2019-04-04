@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2019 at 05:49 PM
+-- Generation Time: Apr 04, 2019 at 05:57 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -114,11 +114,11 @@ CREATE TABLE `pembayaran` (
 
 INSERT INTO `pembayaran` (`id_pembayaran`, `id_tagihan`, `tanggal_pembayaran`, `bulan_bayar`, `biaya_admin`, `total_bayar`, `status`, `bukti`, `id_admin`) VALUES
 (4, 2, '2019-04-01', 'Maret-2022', 2500, 2147483647, 'Lunas', 'goal3.png', 3),
-(5, 3, '2019-04-01', 'Januari-2020', 2500, 36002500, 'Lunas', 'hujansoreitu2.jpg', 3),
-(6, 5, '2019-04-01', 'Maret-2019', 2500, 37002500, 'Lunas', '24_Muhammad_Rezki_Ananda.jpg', 3),
+(5, 3, '2019-04-01', 'Januari-2020', 2500, 36002500, 'Lunas', 'AI1.png', 3),
+(6, 5, '2019-04-01', 'Maret-2019', 2500, 37002500, 'Lunas', 'AI1.png', 3),
 (7, 4, '2019-04-01', 'Januari-2019', 2500, 5002500, 'Lunas', 'AI.png', 3),
-(8, 9, '2019-04-01', 'Agustus-2024', 2500, 74002500, 'Lunas', '24_Muhammad_Rezki_Ananda-min.jpg', 3),
-(9, 10, '2019-04-02', 'Januari-2019', 2500, 3962500, 'Lunas', '24_Muhammad_Rezki_Ananda.jpg', 3);
+(8, 9, '2019-04-01', 'Agustus-2024', 2500, 74002500, 'Lunas', 'AI1.png', 3),
+(9, 10, '2019-04-02', 'Januari-2019', 2500, 3962500, 'Lunas', 'AI1.png', 3);
 
 -- --------------------------------------------------------
 

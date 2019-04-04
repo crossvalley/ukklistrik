@@ -3,7 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User extends CI_Controller {
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
         $this->load->model('m_user','user');
         if ($this->session->userdata('login')==TRUE) {
@@ -28,7 +29,8 @@ class User extends CI_Controller {
 		$this->load->view('user/v_login');
 	}
 
-    public function register_akun(){
+    public function register_akun()
+    {
 
 		if($this->input->post('submit')){
 
@@ -62,7 +64,8 @@ class User extends CI_Controller {
 		
     }
 
-    public function proses_login(){
+    public function proses_login()
+    {
         if($this->input->post('submit')){
             $this->form_validation->set_rules('username','username', 'trim|required');
             $this->form_validation->set_rules('password','password', 'trim|required');
