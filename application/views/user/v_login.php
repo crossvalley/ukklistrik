@@ -145,7 +145,7 @@
 
 <div class="login-box">
   <div class="login-logo">
-    <a href="<?=base_url()?>home/login"><b>Pembayaran</b> Listrik</a>
+    <a href="<?=base_url()?>user/login"><b>PPBO</b> Listrik</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">

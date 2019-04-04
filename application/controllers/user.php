@@ -15,7 +15,7 @@ class User extends CI_Controller {
 
     public function index()
     {
-        $this->load->view('user/login');
+        $this->load->view('user/v_login');
     }
 
     public function register()
